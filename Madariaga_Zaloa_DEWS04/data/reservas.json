@@ -1,0 +1,44 @@
+[
+    {
+        "id": "2",
+        "usuario": "iker",
+        "habitacion": "Habitaci\u00f3n 3",
+        "fecha_entrada": "2024-12-22",
+        "fecha_salida": "2024-12-24"
+    },
+    {
+        "id": "3",
+        "usuario": "ibai",
+        "habitacion": "Habitaci\u00f3n 1",
+        "fecha_entrada": "2025-02-13",
+        "fecha_salida": "2025-02-20"
+    },
+    {
+        "id": "4",
+        "usuario": "joana",
+        "habitacion": "Habitaci\u00f3n 1",
+        "fecha_entrada": "2025-01-07",
+        "fecha_salida": "2025-01-11"
+    },
+    {
+        "id": "5",
+        "usuario": "aitor",
+        "habitacion": "Habitaci\u00f3n 1",
+        "fecha_entrada": "2025-01-15",
+        "fecha_salida": "2025-01-18"
+    },
+    {
+        "id": "6",
+        "usuario": "ane",
+        "habitacion": "Habitaci\u00f3n 2",
+        "fecha_entrada": "2025-02-26",
+        "fecha_salida": "2025-02-28"
+    },
+    {
+        "id": 7,
+        "usuario": "mikel",
+        "habitacion": "Habitaci\u00f3n 3",
+        "fecha_entrada": "2024-12-29",
+        "fecha_salida": "2024-12-31"
+    }
+]
