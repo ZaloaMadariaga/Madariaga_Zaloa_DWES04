@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #7b797b;
+    color: rgb(12, 7, 7);
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav .menu {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para que los enlaces estén uno debajo del otro */
+    justify-content: flex-start; /* Los coloca al principio del contenedor */
+    align-items: flex-end; /* Alinea los enlaces a la derecha */
+    gap: 5px; /* Espaciado entre los enlaces */
+    margin-right: 20px;
+}
+
+
+
+nav .menu a {
+    text-decoration: none;
+    color: #000; /* Puedes cambiar el color según lo que desees */
+    font-size: 16px;
+    font-weight: bold; /* Hace que el texto esté en negrita */
+
+}
+header nav div a {
+    display:flex;
+    text-align: right;
+   
+    color: rgb(232, 228, 228);
+    text-decoration: none;
+
+}
+
+
+main {
+    padding: 20px;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+}
+
+button {
+    background-color: #929292;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #353635;
+}
+
+.room-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.room-card form {
+    margin-top: 10px;
+}

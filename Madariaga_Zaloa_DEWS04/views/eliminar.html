@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Rural Zugazti - Eliminar Reserva</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Casa Rural Zugazti</h1>
+            <nav>
+                <div class="menu">
+                    <a href="#">Más Información</a>
+                    <a href="#">Contacto</a>
+                    <a href="admin.html">Gestión de Reservas</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Eliminar Reserva</h2>
+            <form action="../public/index.php" method="POST">
+                <input type="hidden" name="action" value="deleteReservation">
+                <label for="reservaID">ID Reserva:</label>
+                <input type="text" id="reservaID" name="reservaID" required>
+                <button type="submit">Eliminar Reserva</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
+

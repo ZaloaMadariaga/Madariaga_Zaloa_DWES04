@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Rural Zugazti - Habitaciones</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script>
+        async function createReservation(roomId) {
+            const fechaEntrada = document.getElementById(`fecha_entrada_${roomId}`).value;
+            const fechaSalida = document.getElementById(`fecha_salida_${roomId}`).value;
+
+            const response = await fetch('/public/index.php?action=createReservation', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    id_usuario: 'currentUser', // Debes obtener el usuario actual de la sesión
+                    habitacion: `Habitación ${roomId}`,
+                    fecha_de_entrada: fechaEntrada,
+                    fecha_de_salida: fechaSalida
+                })
+            });
+
+            const result = await response.json();
+            alert(result.message);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Casa Rural Zugazti</h1>
+            <nav>
+                <div class="menu">
+                    <a href="#">Más Información</a>
+                    <a href="#">Contacto</a>
+                    <a href="./admin.html">Gestión de Reservas</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <h1>Habitaciones disponibles</h1>
+    <p>Elija una habitación y las fechas para realizar su reserva.</p>
+
+    <div class="room-card">
+        <h2>Habitación 1</h2>
+        <p><strong>Tamaño:</strong> 25 m²</p>
+        <p><strong>Balcón:</strong> Sí</p>
+        <p><strong>Descripción:</strong> Habitación luminosa con vistas al jardín. Cuenta con una cama doble, escritorio de trabajo y una pequeña zona de estar.</p>
+        <form onsubmit="event.preventDefault(); createReservation(1);">
+            <label for="fecha_entrada_1">Fecha de entrada:</label>
+            <input type="date" id="fecha_entrada_1" name="fecha_entrada" required><br><br>
+
+            <label for="fecha_salida_1">Fecha de salida:</label>
+            <input type="date" id="fecha_salida_1" name="fecha_salida" required><br><br>
+
+            <button type="submit">Reservar Habitación 1</button>
+        </form>
+    </div>
+
+    <div class="room-card">
+        <h2>Habitación 2</h2>
+        <p><strong>Tamaño:</strong> 25 m²</p>
+        <p><strong>Balcón:</strong> Sí</p>
+        <p><strong>Descripción:</strong> Habitación luminosa con vistas al jardín. Cuenta con una cama doble, escritorio de trabajo y una pequeña zona de estar.</p>
+        <form onsubmit="event.preventDefault(); createReservation(1);">
+            <label for="fecha_entrada_1">Fecha de entrada:</label>
+            <input type="date" id="fecha_entrada_1" name="fecha_entrada" required><br><br>
+
+            <label for="fecha_salida_1">Fecha de salida:</label>
+            <input type="date" id="fecha_salida_1" name="fecha_salida" required><br><br>
+
+            <button type="submit">Reservar Habitación 1</button>
+        </form>
+    </div>
+
+
+    <div class="room-card">
+        <h2>Habitación 3</h2>
+        <p><strong>Tamaño:</strong> 25 m²</p>
+        <p><strong>Balcón:</strong> Sí</p>
+        <p><strong>Descripción:</strong> Habitación luminosa con vistas al jardín. Cuenta con una cama doble, escritorio de trabajo y una pequeña zona de estar.</p>
+        <form onsubmit="event.preventDefault(); createReservation(1);">
+            <label for="fecha_entrada_1">Fecha de entrada:</label>
+            <input type="date" id="fecha_entrada_1" name="fecha_entrada" required><br><br>
+        
+            <label for="fecha_salida_1">Fecha de salida:</label>
+            <input type="date" id="fecha_salida_1" name="fecha_salida" required><br><br>
+        
+            <button type="submit">Reservar Habitación 1</button>
+        </form>
+    </div>
+
+    <!-- Repite para las otras habitaciones -->
+</body>
+</html>
